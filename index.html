@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Disease Detector</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+            color: #0d47a1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #0d47a1;
+            padding: 20px;
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            margin: 40px 20px 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 20px 0 10px;
+        }
+
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            margin: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #0d47a1;
+            border-radius: 8px;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            font-size: 15px;
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: #0d47a1;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #0d47a1;
+        }
+
+        img {
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 3px solid #0d47a1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        Fish Disease Detector
+    </div>
+
+    <h1>Empirical Evaluation of Deep Learning Techniques<br> for Fish Disease Detection in Aquaculture Systems</h1>
+
+    <form action="/" method="post" enctype="multipart/form-data">
+        <h2>Upload Image</h2>
+        <input type="file" name="file" required>
+        <br>
+        <button type="submit">Predict</button>
+
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+            <img src="{{ img_path }}" alt="Uploaded Image" style="width:300px;height:300px">
+        {% endif %}
+    </form>
+
+</body>
+</html>
