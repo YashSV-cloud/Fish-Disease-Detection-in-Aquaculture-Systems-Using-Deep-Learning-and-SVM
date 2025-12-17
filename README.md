@@ -59,6 +59,8 @@ conditions. Images are organized into class-wise folders, where each folder
 represents a specific fish disease.
 
 Due to size limitations, the dataset is not included in this GitHub repository.
+Download the dataset from Google Drive:
+https://drive.google.com/drive/folders/12-YUP3FxFJS2OwK3nESBSWRd3D7YSgtO?usp=drive_link
 
 
 DATASET ACCESS
@@ -73,9 +75,15 @@ MODEL FILES
 - label_encoder.pkl        -> Encodes disease class labels
 
 Note:
-The trained model files are not included in the repository due to GitHub
-file size limitations. Download the model files separately and place them
-in the project root directory before running the application.
+## Model Files
+
+Due to GitHub file size limitations, trained model files are not included in this repository.
+
+Download the model files from Google Drive:
+https://drive.google.com/drive/folders/12-YUP3FxFJS2OwK3nESBSWRd3D7YSgtO?usp=drive_link
+
+After downloading, place the files in the project root directory before running the application.
+
 
 
 INSTALLATION AND SETUP
